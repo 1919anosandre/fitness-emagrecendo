@@ -1,0 +1,135 @@
+*{
+margin: 0;
+padding: 0;
+text-transform: capitalize;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+body{
+box-sizing: border-box;
+width: 100%;
+height: 100vh;
+background-image: url('img/img-body.jpg');
+}
+
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #5b5b5b;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: #1d1d1d;
+    border-top-right-radius: 5px;
+}
+
+nav{
+background-color: #aaa;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    }
+
+    section{
+        height: 100vh;
+        width: 100%;
+        }
+        
+
+
+nav ul .Container-Nav{
+    display: flex;
+    justify-content: space-around;
+    top: 0;
+}
+
+nav ul .Container-Nav li{
+list-style: none;
+color: rgb(53, 43, 43);
+font-size: 1.5rem;
+font-weight: 700;
+letter-spacing: 1px;
+}
+
+
+
+
+.Container-Principal{
+align-items: center;
+display: flex;
+justify-content: center;
+flex-direction: column;
+margin: 100px auto;
+z-index: 2;
+}
+
+.Container-Principal h1 , h2{
+color: rgb(245, 217, 217);
+font-size: 1.9rem;
+font-weight: 700;
+letter-spacing: 2px;
+text-align: center;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.Container-Principal p {
+    color: rgb(245, 217, 217);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+
+.Container-Receitas{
+display: flex;
+align-items: center;
+justify-content: space-around;
+flex-wrap: wrap;
+background-color: #ccc;
+
+}
+
+.Receitas{
+background-color: #eee;
+max-width: 380px;
+width: 100%;
+height: 300px;
+overflow-y: auto;
+flex-direction: column;
+margin-top: 15px;
+border-radius: 7px;
+border: 1px solid #ddd;
+
+}
+
+.Receitas h1{
+    color: rgb(65, 59, 59);
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.Receitas p {
+color: black;
+font-size: 1.1rem;
+font-weight: 600;
+padding: 5px 4%;
+
+}
+
+.Receitas img{
+max-width: 300px;
+width: 100%;
+height: auto;
+padding: 5px 4%;
+
+}
