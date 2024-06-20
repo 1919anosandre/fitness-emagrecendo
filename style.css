@@ -1,17 +1,24 @@
-*{
-margin: 0;
-padding: 0;
-text-transform: capitalize;
+* {
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+    border: none;
     font-family: 'Nunito Sans', sans-serif;
 }
 
-body{
-box-sizing: border-box;
-width: 100%;
-height: 100vh;
-background-image: url('img/imgExercicio.webp');
-background-size: cover;
-background-repeat: no-repeat;
+body {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    background-image: url('img/principal.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+}
+
+html {
+
+    overflow-x: hidden;
 }
 
 
@@ -29,72 +36,75 @@ background-repeat: no-repeat;
     border-top-right-radius: 5px;
 }
 
-nav{
-background-color: #ccc;
+nav {
+    background-color: #ccc;
 }
 
-main{
+main {
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
     height: 100%;
-    }
+}
 
-    section{
-        scroll-snap-align: start;
+section {
+    scroll-snap-align: start;
     position: sticky;
     height: 100%;
     top: 0;
     left: 0;
     align-items: center;
     justify-content: center;
-    }
+}
 
-nav ul .Container-Nav{
+nav ul .Container-Nav {
     display: flex;
     justify-content: space-around;
     top: 0;
     margin-left: 60px;
 }
 
-nav ul .Container-Nav li{
-list-style: none;
-color: rgb(44, 37, 37);
-font-size: 1.5rem;
-font-weight: 700;
-letter-spacing: 1px;
-margin-left: 25px;
-
-}
-nav ul .Container-Nav li:hover{
-cursor: pointer;
-}
-nav ul .Container-Nav img{
-margin-right: 130px;
-width: 70px;
+nav ul .Container-Nav li {
+    list-style: none;
+    color: rgb(44, 37, 37);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-left: 25px;
 
 }
 
-
-
-
-.Container-Principal{
-align-items: center;
-display: flex;
-justify-content: center;
-flex-direction: column;
-margin: 200px auto;
-z-index: 2;
+nav ul .Container-Nav li:hover {
+    cursor: pointer;
 }
 
-.Container-Principal h1 , h2{
-color: rgb(245, 217, 217);
-font-size: 1.9rem;
-font-weight: 700;
-letter-spacing: 2px;
-text-align: center;
-text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+nav ul .Container-Nav img {
+    margin-right: 130px;
+    width: 70px;
+
+}
+
+
+
+
+.Container-Principal {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 200px auto;
+    z-index: 2;
+}
+
+.Container-Principal h1,
+h2 {
+    color: rgb(245, 217, 217);
+    font-size: 1.9rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .Container-Principal p {
@@ -106,30 +116,30 @@ text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 
-.Container-Receitas{
-display: flex;
-align-items: center;
-justify-content: space-around;
-flex-wrap: wrap;
-background-color: #ccc;
-height: 100%;
+.Container-Receitas {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #ccc;
+    height: 100%;
 
 }
 
-.Receitas{
-background-color: #eee;
-max-width: 380px;
-width: 100%;
-height: 290px;
-overflow-y: auto;
-flex-direction: column;
-margin-top: 15px;
-border-radius: 7px;
-border: 1px solid #ddd;
+.Receitas {
+    background-color: #eee;
+    max-width: 380px;
+    width: 100%;
+    height: 290px;
+    overflow-y: auto;
+    flex-direction: column;
+    margin-top: 10px;
+    border-radius: 7px;
+    border: 1px solid #ddd;
 
 }
 
-.Receitas h1{
+.Receitas h1 {
     color: rgb(65, 59, 59);
     font-size: 1.4rem;
     font-weight: 700;
@@ -138,42 +148,132 @@ border: 1px solid #ddd;
 }
 
 .Receitas p {
-color: black;
-font-size: 1.1rem;
-font-weight: 600;
-padding: 5px 4%;
+    color: black;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 5px 4%;
 
 }
 
-.Receitas img{
-max-width: 300px;
-width: 100%;
-height: auto;
-padding: 5px 4%;
+.Receitas img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    padding: 5px 4%;
 
 }
 
-.Container-EmagrecerTrinta{
-display: flex;
-background-color: #ccc;
-height: 100%;
+.Container-EmagrecerTrinta {
+    display: flex;
+    background-color: #be9898;
+    height: 100%;
 
 }
-.Container-EmagrecerTrinta img{
-height: 400px;
-width: 100%;
-max-width: 400px;
-margin-right: 10px;
-}
-.Texto{
-padding: 5px 4%;
+
+.Container-EmagrecerTrinta img {
+    height: 400px;
+    width: 100%;
+    max-width: 400px;
+    margin-right: 10px;
+    margin-top: 20px;
 }
 
-.Texto h3{
-text-align: center;
-color: rgb(56, 46, 46);
-font-size: 1.9rem;
-font-weight: 700;
-letter-spacing: 2px;
-text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+.Texto {
+    padding: 5px 4%;
+}
+
+.Texto h3,
+h4 {
+    text-align: center;
+    color: rgb(56, 46, 46);
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+
+.Container-Exercicios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #eee;
+    padding: 5px 10%;
+
+}
+
+.Exercicios {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(212, 185, 185);
+    bottom: 1px solid rgb(255, 255, 244);
+}
+
+.Exercicios h1 {
+    color: rgb(50, 45, 40);
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+.Exercicios p {
+    color: rgb(46, 40, 40);
+    font-size: 1.3rem;
+    font-weight: 600;
+
+}
+
+.Exercicios img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+@media all and (max-width: 767px) {
+    body {
+        height: 100vh;
+        width: 100%;
+    }
+
+    .Container-Nav {
+        flex-direction: column;
+    }
+
+
+
+    .Container-Principal {
+        padding: 0 10%;
+    }
+
+    .Receitas {
+        padding: 0 10%;
+        width: 80%;
+    }
+
+    .Receitas h1 {
+        font-size: 1.1rem;
+
+    }
+
+    .Receitas p {
+        font-size: 1.0rem;
+    }
+
+    .Container-Principal h1 {
+        font-size: 1.4rem;
+    }
+
+    .Container-Principal p {
+        font-size: 1.1rem;
+    }
+
+    .Container-EmagrecerTrinta {
+        flex-direction: column;
+    }
+
+    .Container-EmagrecerTrinta img {
+        padding: 0 10%;
+    }
 }
