@@ -10,10 +10,10 @@ body {
     box-sizing: border-box;
     width: 100%;
     height: 100vh;
-    background-image: url('img/body.webp');
     background-size: cover;
     background-repeat: no-repeat;
     overflow-x: hidden;
+    background-color: #0c0a0a;
 }
 
 
@@ -37,11 +37,10 @@ nav {
 }
 
 main {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 section {
@@ -87,32 +86,36 @@ nav ul .Container-Nav img {
 
 
 .Container-Principal {
-    align-items: center;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin: 200px auto;
-    z-index: 2;
+    justify-content: space-around;
+    align-items: center;
+    margin: 100px auto;
 }
 
-.Container-Principal h1,
+ .Container-Principal ,.Texto h1,
 h2 {
     color: rgb(255, 255, 255);
-    font-size: 1.9rem;
+    font-size: 1.6rem;
     font-weight: 700;
     letter-spacing: 2px;
     text-align: center;
     text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
 }
 
-.Container-Principal p {
+ .Container-Principal ,.Texto p {
     color: rgb(255, 255, 255);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 
 }
 
+.Container-Principal img{
+    height: 400px;
+    width: 100%;
+    max-width: 400px;
+    margin-right: 10px;
+}
 
 .Container-Receitas {
     display: flex;
@@ -179,6 +182,7 @@ h2 {
 
 .Texto {
     padding: 5px 4%;
+    align-items: center;
 }
 
 .Texto h3 {
@@ -280,6 +284,7 @@ border: 2px solid #fff;
 
     .Container-Principal {
         padding: 0 10%;
+        flex-direction: column;
     }
 
     .Receitas {
