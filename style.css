@@ -10,7 +10,7 @@ body {
     box-sizing: border-box;
     width: 100%;
     height: 100vh;
-    background-image: url('img/principal.webp');
+    background-image: url('img/body.webp');
     background-size: cover;
     background-repeat: no-repeat;
     overflow-x: hidden;
@@ -28,12 +28,12 @@ body {
 }
 
 ::-webkit-scrollbar-corner {
-    background-color: #d6b7b7;
+    background-color: #0c0a0a;
     border-top-right-radius: 5px;
 }
 
 nav {
-    background-color: #ccc;
+    background-color: #0b0b20;
 }
 
 main {
@@ -47,7 +47,7 @@ main {
 section {
     scroll-snap-align: start;
     position: sticky;
-    height: 100%;
+    height: 100vh;
     top: 0;
     left: 0;
     align-items: center;
@@ -63,7 +63,7 @@ nav ul .Container-Nav {
 
 nav ul .Container-Nav li {
     list-style: none;
-    color: rgb(44, 37, 37);
+    color: rgb(255, 255, 255);
     font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 1px;
@@ -73,6 +73,8 @@ nav ul .Container-Nav li {
 
 nav ul .Container-Nav li:hover {
     cursor: pointer;
+    transform: scale(1.05);
+    transition: .3s;
 }
 
 nav ul .Container-Nav img {
@@ -95,16 +97,16 @@ nav ul .Container-Nav img {
 
 .Container-Principal h1,
 h2 {
-    color: rgb(245, 217, 217);
+    color: rgb(255, 255, 255);
     font-size: 1.9rem;
     font-weight: 700;
     letter-spacing: 2px;
     text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
 }
 
 .Container-Principal p {
-    color: rgb(245, 217, 217);
+    color: rgb(255, 255, 255);
     font-size: 1.5rem;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -117,13 +119,13 @@ h2 {
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    background-color: #ccc;
+    background-color: #010318;
     height: 100%;
 
 }
 
 .Receitas {
-    background-color: #eee;
+    background-color: #0c0909;
     max-width: 380px;
     width: 100%;
     height: 290px;
@@ -131,12 +133,12 @@ h2 {
     flex-direction: column;
     margin-top: 10px;
     border-radius: 7px;
-    border: 1px solid #ddd;
+    border: 2px solid #080707;
 
 }
 
 .Receitas h1 {
-    color: rgb(65, 59, 59);
+    color: orangered;
     font-size: 1.4rem;
     font-weight: 700;
     letter-spacing: 2px;
@@ -144,7 +146,7 @@ h2 {
 }
 
 .Receitas p {
-    color: black;
+    color: rgb(255, 255, 255);
     font-size: 1.1rem;
     font-weight: 600;
     padding: 5px 4%;
@@ -161,8 +163,9 @@ h2 {
 
 .Container-EmagrecerTrinta {
     display: flex;
-    background-color: #be9898;
+    background-color: #010318;
     height: 100%;
+    margin-top: 10px;
 
 }
 
@@ -178,44 +181,57 @@ h2 {
     padding: 5px 4%;
 }
 
-.Texto h3,
-h4 {
+.Texto h3 {
     text-align: center;
-    color: rgb(56, 46, 46);
+    color:  yellow;
     font-size: 1.6rem;
     font-weight: 700;
     letter-spacing: 2px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 
 }
 
+.Texto p{
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    font-weight: 600;
+
+}
+h4{
+color: rgb(246, 255, 252);
+text-align: center;
+background-color: #010318;
+font-size: 1.6rem;
+font-weight: 700;
+}
 .Container-Exercicios {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: #eee;
-    padding: 5px 10%;
+    justify-content: space-around;
+    background-color: #010318;
+    flex-wrap: wrap;
+
 
 }
 
 .Exercicios {
+    background-color: #241d1d;
+    max-width: 380px;
+    width: 100%;
+    height: 350px;
     flex-direction: column;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(212, 185, 185);
-    bottom: 1px solid rgb(255, 255, 244);
+    margin-top: 10px;
+    border-radius: 7px;
+    border: 2px solid #161616;
 }
 
 .Exercicios h1 {
-    color: rgb(50, 45, 40);
+    color: rgb(14, 255, 134);
     font-weight: 700;
     font-size: 1.6rem;
+    text-align: center;
 }
 
 .Exercicios p {
-    color: rgb(46, 40, 40);
+    color: rgb(255, 255, 255);
     font-size: 1.3rem;
     font-weight: 600;
 
@@ -226,6 +242,30 @@ h4 {
     max-width: 500px;
     height: auto;
 }
+.Exercicios img:hover{
+transform: scale(1.05);
+transition: 2s;
+}
+
+form{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+background-image: url('img/img-body.jpg');
+}
+
+.Container-Contato{
+flex-direction: column;
+display: flex;
+height: 100%;
+}
+
+.Container-Contato input{
+background-color:red;
+border: 2px solid #fff;
+}
+
 
 @media all and (max-width: 767px) {
 
