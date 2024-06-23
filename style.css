@@ -12,9 +12,7 @@ body {
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
-    overflow-x: hidden;
-        background: linear-gradient( 45deg ,rgb(10, 9, 9) 60%, rgb(1, 1, 15) 40%);
-
+    background: linear-gradient(45deg, rgb(10, 9, 9) 60%, rgb(1, 1, 15) 40%);
 }
 
 
@@ -37,6 +35,24 @@ nav {
     background-color: #0b0b20;
 }
 
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+
+.mobile-menu .line1,
+.line2,
+.line3 {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+
+}
+
 main {
     height: 100%;
     display: flex;
@@ -54,14 +70,14 @@ section {
     justify-content: center;
 }
 
-nav ul .Container-Nav {
+nav ul .ContainerNav {
     display: flex;
     justify-content: space-around;
     top: 0;
     margin-left: 60px;
 }
 
-nav ul .Container-Nav li {
+nav ul .ContainerNav li {
     list-style: none;
     color: rgb(255, 255, 255);
     font-size: 1.5rem;
@@ -71,13 +87,13 @@ nav ul .Container-Nav li {
 
 }
 
-nav ul .Container-Nav li:hover {
+nav ul .ContainerNav li:hover {
     cursor: pointer;
     transform: scale(1.05);
     transition: .3s;
 }
 
-nav ul .Container-Nav img {
+nav ul .ContainerNav img {
     margin-right: 130px;
     width: 70px;
 
@@ -93,7 +109,8 @@ nav ul .Container-Nav img {
     margin: 100px auto;
 }
 
- .Container-Principal ,.Texto h1,
+.Container-Principal,
+.Texto h1,
 h2 {
     color: rgb(255, 255, 255);
     font-size: 1.6rem;
@@ -103,7 +120,8 @@ h2 {
     text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
 }
 
- .Container-Principal ,.Texto p {
+.Container-Principal,
+.Texto p {
     color: rgb(255, 255, 255);
     font-size: 1.2rem;
     text-align: center;
@@ -111,7 +129,7 @@ h2 {
 
 }
 
-.Container-Principal img{
+.Container-Principal img {
     height: 400px;
     width: 100%;
     max-width: 400px;
@@ -125,6 +143,8 @@ h2 {
     flex-wrap: wrap;
     background-color: #010318;
     height: 100%;
+    scroll-snap-type: y mandatory;
+
 
 }
 
@@ -135,7 +155,7 @@ h2 {
     height: 290px;
     overflow-y: auto;
     flex-direction: column;
-    margin-top: 10px;
+    margin-top: 7px;
     border-radius: 7px;
     border: 2px solid #080707;
 
@@ -188,26 +208,28 @@ h2 {
 
 .Texto h3 {
     text-align: center;
-    color:  yellow;
+    color: yellow;
     font-size: 1.6rem;
     font-weight: 700;
     letter-spacing: 2px;
 
 }
 
-.Texto p{
+.Texto p {
     color: rgb(255, 255, 255);
     font-size: 1.2rem;
     font-weight: 600;
 
 }
-h4{
-color: rgb(246, 255, 252);
-text-align: center;
-background-color: #010318;
-font-size: 1.6rem;
-font-weight: 700;
+
+h4 {
+    color: rgb(246, 255, 252);
+    text-align: center;
+    background-color: #010318;
+    font-size: 1.6rem;
+    font-weight: 700;
 }
+
 .Container-Exercicios {
     display: flex;
     justify-content: space-around;
@@ -247,39 +269,62 @@ font-weight: 700;
     max-width: 500px;
     height: auto;
 }
-.Exercicios img:hover{
-transform: scale(1.05);
-transition: 2s;
+
+.Exercicios img:hover {
+    transform: scale(1.05);
+    transition: 2s;
 }
 
-form{
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-background-image: url('img/img-body.jpg');
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('img/img-body.jpg');
 }
 
-.Container-Contato{
-flex-direction: column;
-display: flex;
-height: 100%;
+.Container-Contato {
+    flex-direction: column;
+    display: flex;
+    height: 100%;
 }
 
-.Container-Contato input{
-background-color:red;
-border: 2px solid #fff;
+.Container-Contato input {
+    background-color: red;
+    border: 2px solid #fff;
 }
 
 
 @media all and (max-width: 767px) {
 
-
-
-
-    .Container-Nav {
+    .ContainerNav {
+        top: 8vh;
+        width: 85vw;
+        height: 92vh;
+        display: flex;
+        /* Make it a flex container */
         flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        z-index: 2;
+        position: absolute;
     }
+
+    .ContainerNav li {
+        margin-left: 0;
+        opacity: 0;
+    }
+
+    .ContainerNav .active {
+        transform: translateX(0);
+        background: #23232e;
+    }
+
+    .mobile-menu {
+        display: block;
+
+    }
+
 
 
 
@@ -318,4 +363,5 @@ border: 2px solid #fff;
         padding: 10px 4%;
         width: 90%;
     }
+
 }
