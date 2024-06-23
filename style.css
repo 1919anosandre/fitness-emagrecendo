@@ -91,6 +91,7 @@ nav ul .ContainerNav li:hover {
     cursor: pointer;
     transform: scale(1.05);
     transition: .3s;
+
 }
 
 nav ul .ContainerNav img {
@@ -163,7 +164,7 @@ h2 {
 
 .Receitas h1 {
     color: orangered;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 700;
     letter-spacing: 2px;
     text-align: center;
@@ -174,6 +175,7 @@ h2 {
     font-size: 1.1rem;
     font-weight: 600;
     padding: 5px 4%;
+    text-align: center;
 
 }
 
@@ -181,7 +183,8 @@ h2 {
     max-width: 300px;
     width: 100%;
     height: auto;
-    padding: 5px 4%;
+    padding: 0 10%;
+    margin-top: 5px;
 
 }
 
@@ -200,6 +203,7 @@ h2 {
     margin-right: 10px;
     margin-top: 20px;
 }
+
 
 .Texto {
     padding: 5px 4%;
@@ -305,7 +309,7 @@ form {
         /* Make it a flex container */
         flex-direction: column;
         align-items: center;
-        justify-content: space-around;
+        justify-content: center;
         z-index: 2;
         position: absolute;
     }
@@ -315,17 +319,22 @@ form {
         opacity: 0;
     }
 
-    .ContainerNav .active {
-        transform: translateX(0);
-        background: #23232e;
-    }
+
 
     .mobile-menu {
         display: block;
+        text-align: center;
 
     }
 
+    .Exercicios {
+        width: 80%;
+    }
 
+    .Exercicios p {
+        font-size: 1.2rem;
+        text-align: center;
+    }
 
 
     .Container-Principal {
@@ -335,7 +344,7 @@ form {
 
     .Receitas {
         padding: 0 10%;
-        width: 80%;
+        width: 70%;
     }
 
     .Receitas h1 {
@@ -357,11 +366,16 @@ form {
 
     .Container-EmagrecerTrinta {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .Container-EmagrecerTrinta img {
         padding: 10px 4%;
-        width: 90%;
+        width: 80%;
     }
 
+    .Texto {
+        padding: 0 10%;
+    }
 }
