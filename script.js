@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 });
-
+/*
 class MobileNavbar {
     constructor(mobileMenu, containerNav, navLinks) {
         this.mobileMenu = document.querySelector(mobileMenu);
@@ -98,3 +98,13 @@ const mobileNavbar = new MobileNavbar(
     ".Container-Nav li"
 );
 mobileNavbar.init();
+*/
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const ContainerNav = document.querySelector('.ContainerNav');
+
+    mobileMenu.addEventListener('click', () => {
+        // Adiciona ou remove a classe 'active' para mostrar/ocultar o menu
+        ContainerNav.style.display = 'flex'
+    });
+});
