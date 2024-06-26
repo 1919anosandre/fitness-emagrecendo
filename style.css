@@ -64,8 +64,7 @@ section {
     scroll-snap-align: start;
     position: sticky;
     height: 100vh;
-    top: 0;
-    left: 0;
+
     align-items: center;
     justify-content: center;
 }
@@ -143,22 +142,21 @@ h2 {
     justify-content: space-around;
     flex-wrap: wrap;
     background-color: #010318;
-    height: 100%;
     scroll-snap-type: y mandatory;
 
-
+    height: 100vh;
 }
 
 .Receitas {
     background-color: #0c0909;
     max-width: 380px;
     width: 100%;
-    height: 290px;
-    overflow-y: auto;
+    height: 300px;
     flex-direction: column;
     margin-top: 7px;
     border-radius: 7px;
     border: 2px solid #080707;
+    overflow-x: auto;
 
 }
 
@@ -180,7 +178,7 @@ h2 {
 }
 
 .Receitas img {
-    max-width: 300px;
+    max-width: 290px;
     width: 100%;
     height: auto;
     padding: 0 10%;
@@ -192,7 +190,8 @@ h2 {
     display: flex;
     background-color: #010318;
     height: 100%;
-    margin-top: 10px;
+    scroll-snap-type: y mandatory;
+
 
 }
 
@@ -237,17 +236,19 @@ h4 {
 .Container-Exercicios {
     display: flex;
     justify-content: space-around;
-    background-color: #010318;
+    background-color: #03031a;
     flex-wrap: wrap;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
 
 
 }
 
 .Exercicios {
     background-color: #0c0909;
-    max-width: 380px;
+    max-width: 320px;
     width: 100%;
-    height: 390px;
+    height: 290px;
     flex-direction: column;
     margin-top: 10px;
     border-radius: 7px;
@@ -261,21 +262,15 @@ h4 {
 .Exercicios h1 {
     color: rgb(14, 255, 134);
     font-weight: 700;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     text-align: center;
 }
 
-.Exercicios p {
-    color: rgb(255, 255, 255);
-    font-size: 1.3rem;
-    font-weight: 600;
-    padding: 1px 1%;
 
-}
 
 .Exercicios img {
     width: 100%;
-    max-width: 500px;
+    max-width: 260px;
     height: auto;
 }
 
@@ -300,13 +295,7 @@ h4 {
     background-color: green;
 }
 
-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-image: url('img/img-body.jpg');
-}
+
 
 .Container-Contato {
     flex-direction: column;
@@ -318,6 +307,8 @@ form {
     background-color: red;
     border: 2px solid #fff;
 }
+
+
 
 
 @media all and (max-width: 767px) {
@@ -352,10 +343,6 @@ form {
         width: 80%;
     }
 
-    .Exercicios p {
-        font-size: 1.2rem;
-        text-align: center;
-    }
 
 
     .Container-Principal {
@@ -388,6 +375,10 @@ form {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    .Container-Exercicios {
+        overflow-y: auto;
     }
 
     .Container-EmagrecerTrinta img {
