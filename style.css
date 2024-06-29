@@ -272,6 +272,7 @@ h4 {
     width: 100%;
     max-width: 260px;
     height: auto;
+    margin-top: 8px;
 }
 
 .Exercicios img:hover {
@@ -281,18 +282,22 @@ h4 {
 
 .Exercicios button {
     width: 50%;
-    background-color: rgb(14, 255, 134);
-    color: #000000;
+    background-color: rgb(8, 8, 8);
+    color: #ccc;
     border-radius: 7px;
     border: 1px solid rgb(9, 87, 9);
     padding: 6px 10%;
+    margin-top: 8px;
 }
 
 .Exercicios button:hover {
     cursor: pointer;
     transform: scale(1.01);
-    transition: 3s;
-    background-color: green;
+    transition: 2s;
+    background-color: rgb(14, 255, 134);
+    border: 1px solid rgb(8, 8, 8);
+    color: #000;
+
 }
 
 
