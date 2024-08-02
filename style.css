@@ -12,7 +12,7 @@ body {
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
-    background: linear-gradient(45deg, rgb(7, 20, 56) 60%, rgb(2, 2, 39) 40%);
+    background: linear-gradient(45deg, rgb(53, 59, 77) 60%, rgb(38, 38, 61) 40%);
 }
 
 
@@ -63,10 +63,8 @@ main {
 section {
     scroll-snap-align: start;
     position: sticky;
-    height: 100vh;
 
-    align-items: center;
-    justify-content: center;
+
 }
 
 nav ul .ContainerNav {
@@ -141,28 +139,28 @@ h2 {
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    background-color: #010318;
+    background-color: #2a3435;
     scroll-snap-type: y mandatory;
-
     height: 100vh;
+
 }
 
 .Receitas {
     background-color: #0c0909;
     max-width: 380px;
     width: 100%;
-    height: 300px;
+    height: 280px;
     flex-direction: column;
-    margin-top: 7px;
     border-radius: 7px;
     border: 2px solid #080707;
-    overflow-x: auto;
-
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 .Receitas h1 {
     color: orangered;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 700;
     letter-spacing: 2px;
     text-align: center;
@@ -170,7 +168,7 @@ h2 {
 
 .Receitas p {
     color: rgb(255, 255, 255);
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     font-weight: 600;
     padding: 5px 4%;
     text-align: center;
@@ -178,17 +176,16 @@ h2 {
 }
 
 .Receitas img {
-    max-width: 290px;
+    max-width: 240px;
     width: 100%;
     height: auto;
-    padding: 0 10%;
     margin-top: 5px;
 
 }
 
 .Container-EmagrecerTrinta {
     display: flex;
-    background-color: #010318;
+    background-color: #1b1e3f;
     height: 100%;
     scroll-snap-type: y mandatory;
 
@@ -233,10 +230,11 @@ h4 {
     font-weight: 700;
 }
 
-.Container-Exercicios , .Container-Treino{
+.Container-Exercicios,
+.Container-Treino {
     display: flex;
     justify-content: space-around;
-    background-color: #03031a;
+    background-color: #040718;
     flex-wrap: wrap;
     scroll-snap-type: y mandatory;
     height: 100vh;
@@ -244,11 +242,12 @@ h4 {
 
 }
 
-.Exercicios , .Exercicios-Treino {
-    background-color: #0c0909;
-    max-width: 320px;
+.Exercicios,
+.Exercicios-Treino {
+    background-color: #0c0b0b;
+    max-width: 280px;
     width: 100%;
-    height: 290px;
+    height: 230px;
     flex-direction: column;
     margin-top: 10px;
     border-radius: 7px;
@@ -259,38 +258,42 @@ h4 {
 
 }
 
-.Exercicios h1 , .Exercicios-Treino {
+.Exercicios h1,
+.Exercicios-Treino {
     color: rgb(14, 255, 134);
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-align: center;
 }
 
 
 
-.Exercicios img , .Exercicios-Treino {
+.Exercicios img,
+.Exercicios-Treino {
     width: 100%;
-    max-width: 260px;
-    height: auto;
-    margin-top: 8px;
+    height: 170px;
+    margin-top: 0;
 }
 
-.Exercicios img:hover , .Exercicios-Treino img:hover {
+.Exercicios:hover,
+.Exercicios-Treino:hover {
     transform: scale(1.05);
     transition: 2s;
 }
 
-.Exercicios button, .Exercicios-Treino button{
+.Exercicios button,
+.Exercicios-Treino button {
     width: 50%;
     background-color: rgb(8, 8, 8);
     color: #ccc;
     border-radius: 7px;
     border: 1px solid rgb(9, 87, 9);
     padding: 6px 10%;
-    margin-top: 8px;
+    margin-top: 5px;
 }
 
-.Exercicios button:hover ,  .Exercicios-Treino {
+.Exercicios button:hover,
+.Exercicios-Treino {
     cursor: pointer;
     transform: scale(1.01);
     transition: 2s;
@@ -344,7 +347,8 @@ h4 {
 
     }
 
-    .Exercicios , .Exercicios-Treino {
+    .Exercicios,
+    .Exercicios-Treino {
         width: 80%;
     }
 
@@ -382,7 +386,8 @@ h4 {
         align-items: center;
     }
 
-    .Container-Exercicios , .Container-Treino {
+    .Container-Exercicios,
+    .Container-Treino {
         overflow-y: auto;
     }
 
