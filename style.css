@@ -139,28 +139,19 @@ h2 {
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    background-color: #2a3435;
+    background-color: #262d3a;
     scroll-snap-type: y mandatory;
-    height: 100vh;
 
 }
 
 .Receitas {
-    background-color: #0c0909;
-    max-width: 380px;
-    width: 100%;
-    height: 280px;
-    flex-direction: column;
-    border-radius: 7px;
-    border: 2px solid #080707;
-    justify-content: center;
-    align-items: center;
-    display: flex;
+  justify-content: space-around;
+  display: flex;
 }
 
 .Receitas h1 {
     color: orangered;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     font-weight: 700;
     letter-spacing: 2px;
     text-align: center;
@@ -168,7 +159,7 @@ h2 {
 
 .Receitas p {
     color: rgb(255, 255, 255);
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     font-weight: 600;
     padding: 5px 4%;
     text-align: center;
@@ -176,44 +167,60 @@ h2 {
 }
 
 .Receitas img {
-    max-width: 240px;
     width: 100%;
-    height: auto;
-    margin-top: 5px;
+    max-width: 270px;
+    height: 180px;
+    margin: 0 20px;
+    margin-top: 20px;
 
 }
 
 .Container-EmagrecerTrinta {
     display: flex;
     background-color: #1b1e3f;
-    height: 100%;
     scroll-snap-type: y mandatory;
-
+justify-content: center;
+align-items: center;
 
 }
 
-.Container-EmagrecerTrinta img {
-    height: 400px;
+.EmagrecerTrinta img {
+    height: 350px;
     width: 100%;
-    max-width: 400px;
-    margin-right: 10px;
-    margin-top: 20px;
+    max-width: 350px;
+    margin-top: 10px;
+
 }
 
+.EmagrecerTrinta{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+.EmagrecerTrinta h3{
+text-align: center;
+font-size: 1.5rem;
+font-weight: bold;
+letter-spacing: 2px;
+color: #c8ff00;
+}
+.EmagrecerTrinta p{
+font-size: 1.2rem;
+font-weight: 600;
+color: #ccc;
+padding: 5px 5%;
+}
 
 .Texto {
     padding: 5px 4%;
     align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.Texto h3 {
-    text-align: center;
-    color: yellow;
-    font-size: 1.6rem;
-    font-weight: 700;
-    letter-spacing: 2px;
 
-}
 
 .Texto p {
     color: rgb(255, 255, 255);
@@ -360,7 +367,9 @@ h4 {
     }
 
     .Receitas {
-        width: 70%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     .Receitas h1 {
@@ -380,12 +389,7 @@ h4 {
         font-size: 1.1rem;
     }
 
-    .Container-EmagrecerTrinta {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
+ 
     .Container-Exercicios,
     .Container-Treino {
         overflow-y: auto;
