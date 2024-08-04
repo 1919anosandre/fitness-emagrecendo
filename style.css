@@ -12,7 +12,7 @@ body {
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
-    background: linear-gradient(45deg, rgb(53, 59, 77) 60%, rgb(38, 38, 61) 40%);
+    background: linear-gradient(45deg, rgb(10, 1, 19) 60%, rgb(12, 4, 26) 40%);
 }
 
 
@@ -32,7 +32,7 @@ body {
 }
 
 nav {
-    background-color: #0b0b20;
+    background-color: #140114;
 }
 
 
@@ -76,7 +76,7 @@ nav ul .ContainerNav {
 
 nav ul .ContainerNav li {
     list-style: none;
-    color: rgb(255, 255, 255);
+    color:  rgb(14, 207, 255);
     font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 1px;
@@ -139,7 +139,7 @@ h2 {
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    background-color: #262d3a;
+    background-color: #25062993;
     scroll-snap-type: y mandatory;
 
 }
@@ -177,7 +177,7 @@ h2 {
 
 .Container-EmagrecerTrinta {
     display: flex;
-    background-color: #1b1e3f;
+    background-color: #221531;
     scroll-snap-type: y mandatory;
 justify-content: center;
 align-items: center;
@@ -203,12 +203,12 @@ text-align: center;
 font-size: 1.5rem;
 font-weight: bold;
 letter-spacing: 2px;
-color: #c8ff00;
+color: rgb(255, 230, 0);
 }
 .EmagrecerTrinta p{
 font-size: 1.2rem;
 font-weight: 600;
-color: #ccc;
+color: rgb(255, 255, 255);
 padding: 5px 5%;
 }
 
@@ -230,7 +230,7 @@ padding: 5px 5%;
 }
 
 h4 {
-    color: rgb(246, 255, 252);
+    color: rgb(255, 255, 255);
     text-align: center;
     background-color: #010318;
     font-size: 1.6rem;
@@ -241,7 +241,7 @@ h4 {
 .Container-Treino {
     display: flex;
     justify-content: space-around;
-    background-color: #040718;
+    background-color: #031627;
     flex-wrap: wrap;
     scroll-snap-type: y mandatory;
     height: 100vh;
