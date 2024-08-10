@@ -108,3 +108,53 @@ document.addEventListener('DOMContentLoaded', () => {
         ContainerNav.style.display = 'flex'
     });
 });
+
+const Calcular = document.getElementById('Calcular');
+
+function IMC(){
+    const Peso = parseFloat(document.getElementById('Peso').value);
+    const Altura = parseFloat(document.getElementById('Altura').value);
+    const Mensagem = document.getElementById('Mensagem');
+
+    if(isNaN(Peso) || isNaN(Altura) || Peso <= 0 || Altura <= 0 ){
+        Mensagem.textContent = 'Preencha todos os campos corretamente';
+        return;
+    }
+
+    const ValorIMC = Peso / (Altura * Altura);
+    let classificacao = '';
+
+    if (ValorIMC < 18.5) {
+        classificacao = 'abaixo do peso';
+    } else if (ValorIMC >= 18.5 && ValorIMC <= 24.9) {
+        classificacao = 'com peso ideal';
+    } else if (ValorIMC >= 25 && ValorIMC <= 29.9) {
+        classificacao = 'acima do peso';
+    } else {
+        classificacao = 'com uma classificação não comum';
+    }
+
+    Mensagem.textContent = `Você está pesando ${Peso}kg, seu IMC é ${ValorIMC.toFixed(2)} e você está ${classificacao}`;
+}
+
+Calcular.addEventListener('click', IMC);
+
+function Evento_Rolagem(){
+const Container_Perguntas = document.querySelector('.Container-Perguntas');
+const Container_Posicao = Container_Perguntas.getBoundingClientRect().top;
+const screen_Position = window.innerHeight / 1.3;
+
+if(Container_Posicao < screen_Position){
+Container_Perguntas.classList.add('visible');
+}
+}
+document.addEventListener('DOMContentLoaded' , Evento_Rolagem);
+document.addEventListener('scroll' , Evento_Rolagem);
+
+function Indicacao_Exercicio(){
+const emagrecer = document.querySelector('.emagrecer');
+const engordar = document.querySelector('.engordar');
+const massa = document.querySelector('.massa-muscular')
+const ContainerExercicios = document.querySelector('.Container-Exercicios')
+
+}
