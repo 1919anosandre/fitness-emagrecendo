@@ -323,6 +323,131 @@ h4 {
     border: 2px solid #fff;
 }
 
+.Container-Perguntas{
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100%;
+opacity: 0;
+transform: translateY(20px);
+transition: opacity 2s ease-out , transform 2s ease-out;
+
+}
+.Container-Perguntas.visible{
+opacity: 1;
+transform: translateY(0);
+}
+
+.Perguntas{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 5px;
+}
+.Perguntas h1{
+color: green;
+font-size: 4em;
+font-weight: bold;
+letter-spacing: 2px;
+
+}
+
+.Perguntas p{
+color: white;
+font-size: 3em;
+font-weight: 600;
+
+}
+.Perguntas p:hover{
+cursor: pointer;
+color: #3e005a;
+}
+
+.Alinhamento-img-texto{
+display: flex;
+justify-content: space-around;
+}
+
+.Alinhamento-img-texto img{
+width: 100%;
+max-width: 550px;
+height: 550px;
+margin-left: 100px;
+}
+
+
+.Container-Calculadora{
+    display: flex;
+  align-items: center;
+  margin: 100px auto 0 ;
+  justify-content: center;
+  width: 100%;
+  }
+  .Form{
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+background-color: rgba(65, 0, 45, 0.781);
+width: 100%;
+max-width: 430px;
+height: 430px;
+border-radius: 7px;
+box-shadow: 1px 1px 1px 1px rgb(10, 10, 10);
+
+}
+  .Form h1{
+  font-size: 35px;
+  color: rgb(255, 255, 255);
+  }
+  
+  .Form label{
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  font-weight: 600;
+  margin-top: 15px;
+  }
+  
+  .Form input{
+  width: 80%;
+  padding: 10px;
+  border-radius: 7px;
+  border: 01px solid rgb(128, 105, 105);
+  margin-top: 15px;
+  background-color: #140114;
+  color: rgb(255, 255, 255);
+
+  }
+  
+  .Form textarea{
+    width: 80%;
+    padding:30px;
+    border-radius: 7px;
+    border: 01px solid rgb(128, 105, 105);
+    margin-top: 10px;
+    color: rgb(43, 38, 38);
+    font-size: 15px;
+    font-weight: 600;
+    padding-block-end: 2px;
+  }
+  
+  #Calcular{
+    margin-top: 15px;
+    background-color: rgb(255, 23, 81);
+    color: rgb(255, 252, 252);
+    font-size: 20px;
+    border-radius: 7px;
+    border: none;
+    width: 50%;
+  
+  }
+  
+  #Calcular:hover{
+    background-color: rgb(128, 0, 110);
+    cursor: pointer;
+  }
+  
 
 
 
@@ -402,5 +527,32 @@ h4 {
 
     .Texto {
         padding: 0 10%;
+    }
+
+    .Container-Perguntas{
+    flex-direction: column;
+    }
+    .Alinhamento-img-texto{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .Perguntas h1{
+    font-size: 1.3rem;
+    }
+    .Perguntas p{
+    font-size: 1.2rem;
+    }
+
+    .Alinhamento-img-texto img{
+    height: 200px;
+    max-width: 200px;
+    margin-right: 100px;
+    }
+
+  
+    .Form{
+    width: 80%;
     }
 }
