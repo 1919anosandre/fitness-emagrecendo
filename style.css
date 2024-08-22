@@ -12,7 +12,7 @@ body {
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
-    background: linear-gradient(45deg, rgb(10, 1, 19) 60%, rgb(12, 4, 26) 40%);
+    background: linear-gradient(45deg,  rgb(155, 160, 160) 60%, rgb(156, 156, 156) 40%);
 }
 
 
@@ -32,7 +32,7 @@ body {
 }
 
 nav {
-    background-color: #140114;
+    background-color: #005F73;
 }
 
 
@@ -76,7 +76,7 @@ nav ul .ContainerNav {
 
 nav ul .ContainerNav li {
     list-style: none;
-    color:  rgb(14, 207, 255);
+    color: rgb(255, 255, 255);
     font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 1px;
@@ -87,7 +87,7 @@ nav ul .ContainerNav li {
 nav ul .ContainerNav li:hover {
     cursor: pointer;
     transform: scale(1.05);
-    transition: .3s;
+    transition: 3s;
 
 }
 
@@ -110,20 +110,18 @@ nav ul .ContainerNav img {
 .Container-Principal,
 .Texto h1,
 h2 {
-    color: rgb(255, 255, 255);
-    font-size: 1.6rem;
+    color: rgb(34, 34, 34);
+    font-size: 3rem;
     font-weight: 700;
     letter-spacing: 2px;
     text-align: center;
-    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
 }
 
 .Container-Principal,
 .Texto p {
-    color: rgb(255, 255, 255);
-    font-size: 1.2rem;
+    color: rgb(34, 34, 34);
+    font-size: 2rem;
     text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 
 }
 
@@ -139,18 +137,18 @@ h2 {
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    background-color: #25062993;
+    background-color: #FFF8E1;
     scroll-snap-type: y mandatory;
 
 }
 
 .Receitas {
-  justify-content: space-around;
-  display: flex;
+    justify-content: space-around;
+    display: flex;
 }
 
 .Receitas h1 {
-    color: orangered;
+    color: rgb(49, 49, 48);
     font-size: 1.3rem;
     font-weight: 700;
     letter-spacing: 2px;
@@ -158,7 +156,7 @@ h2 {
 }
 
 .Receitas p {
-    color: rgb(255, 255, 255);
+    color: orangered;
     font-size: 1.1rem;
     font-weight: 600;
     padding: 5px 4%;
@@ -177,10 +175,10 @@ h2 {
 
 .Container-EmagrecerTrinta {
     display: flex;
-    background-color: #221531;
+    background-color: #F7EED6;
     scroll-snap-type: y mandatory;
-justify-content: center;
-align-items: center;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -192,24 +190,26 @@ align-items: center;
 
 }
 
-.EmagrecerTrinta{
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
+.EmagrecerTrinta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
-.EmagrecerTrinta h3{
-text-align: center;
-font-size: 1.5rem;
-font-weight: bold;
-letter-spacing: 2px;
-color: rgb(255, 230, 0);
+
+.EmagrecerTrinta h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: orangered;
 }
-.EmagrecerTrinta p{
-font-size: 1.2rem;
-font-weight: 600;
-color: rgb(255, 255, 255);
-padding: 5px 5%;
+
+.EmagrecerTrinta p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: orangered;
+    padding: 5px 5%;
 }
 
 .Texto {
@@ -241,7 +241,7 @@ h4 {
 .Container-Treino {
     display: flex;
     justify-content: space-around;
-    background-color: #031627;
+    background-color: #8b9394;
     flex-wrap: wrap;
     scroll-snap-type: y mandatory;
     height: 100vh;
@@ -251,14 +251,14 @@ h4 {
 
 .Exercicios,
 .Exercicios-Treino {
-    background-color: #0c0b0b;
+    background-color: #cfcfcfc4;
     max-width: 280px;
     width: 100%;
     height: 230px;
     flex-direction: column;
     margin-top: 10px;
     border-radius: 7px;
-    border: 2px solid #161616;
+    border: 1px solid #aaaaaa;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -267,7 +267,7 @@ h4 {
 
 .Exercicios h1,
 .Exercicios-Treino {
-    color: rgb(14, 255, 134);
+    color: rgb(19, 18, 18);
     font-weight: 700;
     font-size: 1.1rem;
     text-align: center;
@@ -291,10 +291,10 @@ h4 {
 .Exercicios button,
 .Exercicios-Treino button {
     width: 50%;
-    background-color: rgb(8, 8, 8);
-    color: #ccc;
+    background-color: rgb(0, 92, 212);
+    color: #ffffff;
     border-radius: 7px;
-    border: 1px solid rgb(9, 87, 9);
+    border: 1px solid rgb(0, 144, 180);
     padding: 6px 10%;
     margin-top: 5px;
 }
@@ -304,9 +304,8 @@ h4 {
     cursor: pointer;
     transform: scale(1.01);
     transition: 2s;
-    background-color: rgb(14, 255, 134);
-    border: 1px solid rgb(8, 8, 8);
-    color: #000;
+    background-color: rgb(15, 51, 71);
+    border: 1px solid rgb(8, 77, 141);
 
 }
 
@@ -323,106 +322,111 @@ h4 {
     border: 2px solid #fff;
 }
 
-.Container-Perguntas{
-display: flex;
-align-items: center;
-justify-content: center;
-height: 100%;
-opacity: 0;
-transform: translateY(20px);
-transition: opacity 2s ease-out , transform 2s ease-out;
-
-}
-.Container-Perguntas.visible{
-opacity: 1;
-transform: translateY(0);
-}
-
-.Perguntas{
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-padding: 5px;
-}
-.Perguntas h1{
-color: green;
-font-size: 4em;
-font-weight: bold;
-letter-spacing: 2px;
-
-}
-
-.Perguntas p{
-color: white;
-font-size: 3em;
-font-weight: 600;
-
-}
-.Perguntas p:hover{
-cursor: pointer;
-color: #3e005a;
-}
-
-.Alinhamento-img-texto{
-display: flex;
-justify-content: space-around;
-}
-
-.Alinhamento-img-texto img{
-width: 100%;
-max-width: 550px;
-height: 550px;
-margin-left: 100px;
-}
-
-
-.Container-Calculadora{
+.Container-Perguntas {
     display: flex;
-  align-items: center;
-  margin: 100px auto 0 ;
-  justify-content: center;
-  width: 100%;
-  }
-  .Form{
-display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
-background-color: rgba(65, 0, 45, 0.781);
-width: 100%;
-max-width: 430px;
-height: 430px;
-border-radius: 7px;
-box-shadow: 1px 1px 1px 1px rgb(10, 10, 10);
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 2s ease-out, transform 2s ease-out;
 
 }
-  .Form h1{
-  font-size: 35px;
-  color: rgb(255, 255, 255);
-  }
-  
-  .Form label{
-  color: rgb(255, 255, 255);
-  font-size: 25px;
-  font-weight: 600;
-  margin-top: 15px;
-  }
-  
-  .Form input{
-  width: 80%;
-  padding: 10px;
-  border-radius: 7px;
-  border: 01px solid rgb(128, 105, 105);
-  margin-top: 15px;
-  background-color: #140114;
-  color: rgb(255, 255, 255);
 
-  }
-  
-  .Form textarea{
+.Container-Perguntas.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.Perguntas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.Perguntas h1 {
+    color: orangered;
+    font-size: 4em;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+}
+
+.Perguntas p {
+    color: white;
+    font-size: 3em;
+    font-weight: 600;
+
+}
+
+.Perguntas p:hover {
+    cursor: pointer;
+    color: #3e005a;
+}
+
+.Alinhamento-img-texto {
+    display: flex;
+    justify-content: space-around;
+}
+
+.Alinhamento-img-texto img {
+    width: 100%;
+    max-width: 550px;
+    height: 550px;
+    margin-left: 100px;
+}
+
+
+.Container-Calculadora {
+    display: flex;
+    align-items: center;
+    margin: 100px auto 0;
+    justify-content: center;
+    width: 100%;
+}
+
+.Form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(65, 0, 45, 0.781);
+    width: 100%;
+    max-width: 430px;
+    height: 430px;
+    border-radius: 7px;
+    box-shadow: 1px 1px 1px 1px rgb(10, 10, 10);
+
+}
+
+.Form h1 {
+    font-size: 35px;
+    color: rgb(255, 255, 255);
+}
+
+.Form label {
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.Form input {
     width: 80%;
-    padding:30px;
+    padding: 10px;
+    border-radius: 7px;
+    border: 01px solid rgb(128, 105, 105);
+    margin-top: 15px;
+    background-color: #140114;
+    color: rgb(255, 255, 255);
+
+}
+
+.Form textarea {
+    width: 80%;
+    padding: 30px;
     border-radius: 7px;
     border: 01px solid rgb(128, 105, 105);
     margin-top: 10px;
@@ -430,9 +434,9 @@ box-shadow: 1px 1px 1px 1px rgb(10, 10, 10);
     font-size: 15px;
     font-weight: 600;
     padding-block-end: 2px;
-  }
-  
-  #Calcular{
+}
+
+#Calcular {
     margin-top: 15px;
     background-color: rgb(255, 23, 81);
     color: rgb(255, 252, 252);
@@ -440,14 +444,14 @@ box-shadow: 1px 1px 1px 1px rgb(10, 10, 10);
     border-radius: 7px;
     border: none;
     width: 50%;
-  
-  }
-  
-  #Calcular:hover{
+
+}
+
+#Calcular:hover {
     background-color: rgb(128, 0, 110);
     cursor: pointer;
-  }
-  
+}
+
 
 
 
@@ -514,7 +518,7 @@ box-shadow: 1px 1px 1px 1px rgb(10, 10, 10);
         font-size: 1.1rem;
     }
 
- 
+
     .Container-Exercicios,
     .Container-Treino {
         overflow-y: auto;
@@ -529,30 +533,32 @@ box-shadow: 1px 1px 1px 1px rgb(10, 10, 10);
         padding: 0 10%;
     }
 
-    .Container-Perguntas{
-    flex-direction: column;
-    }
-    .Alinhamento-img-texto{
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    .Container-Perguntas {
+        flex-direction: column;
     }
 
-    .Perguntas h1{
-    font-size: 1.3rem;
-    }
-    .Perguntas p{
-    font-size: 1.2rem;
-    }
-
-    .Alinhamento-img-texto img{
-    height: 200px;
-    max-width: 200px;
-    margin-right: 100px;
+    .Alinhamento-img-texto {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
-  
-    .Form{
-    width: 80%;
+    .Perguntas h1 {
+        font-size: 1.3rem;
+    }
+
+    .Perguntas p {
+        font-size: 1.2rem;
+    }
+
+    .Alinhamento-img-texto img {
+        height: 250px;
+        max-width: 250px;
+        margin-right: 100px;
+    }
+
+
+    .Form {
+        width: 80%;
     }
 }
