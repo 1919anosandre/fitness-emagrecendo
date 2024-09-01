@@ -461,6 +461,10 @@ strong {
 
 @media all and (max-width: 767px) {
 
+    body{
+    background-size: contain;
+    }
+
     .ContainerNav {
         top: 8vh;
         width: 85vw;
@@ -487,16 +491,12 @@ strong {
 
     }
 
-    .Exercicios,
-    .Exercicios-Treino {
-        width: 80%;
-    }
+ 
 
 
 
     .Container-Principal {
         padding: 0 10%;
-        flex-direction: column;
     }
 
     .Receitas {
@@ -523,10 +523,7 @@ strong {
     }
 
 
-    .Container-Exercicios,
-    .Container-Treino {
-        overflow-y: auto;
-    }
+
 
     .Container-EmagrecerTrinta img {
         padding: 10px 4%;
