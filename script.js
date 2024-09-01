@@ -2,14 +2,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const containerPrincipal = document.querySelector('.Container-Principal');
     const ContainerReceitas = document.querySelector('.Container-Receitas')
     const ContainerEmagrecer = document.querySelector('.Container-EmagrecerTrinta')
-    const ContainerExercicio = document.querySelector('.Container-Exercicios')
-
+    const Container_Perguntas = document.querySelector('.Container-Perguntas')
+    const Texto_Principal = document.querySelector('.Texto')
     const Inicio = document.querySelector('#Inicio')
     const Receitas = document.querySelector('#Receitas')
     const Emagrecer = document.querySelector('#Emagrecer')
-    const Exercicio = document.querySelector('#Exercicio')
+    const Perguntas = document.querySelector('#Perguntas')
 
-    containerPrincipal.style.opacity = '0';
+    Texto_Principal.style.opacity = '0';
 
 
 
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let opacity = 0;
         const interval = setInterval(() => {
             opacity += 0.05;
-            containerPrincipal.style.opacity = opacity.toString();
+            Texto_Principal.style.opacity = opacity.toString();
 
             if (opacity >= 1) {
                 clearInterval(interval);
@@ -34,8 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
         ContainerReceitas.scrollIntoView({ behavior: "smooth" });
     });
 
-    Exercicio.addEventListener("click", () => {
-        ContainerExercicio.scrollIntoView({ behavior: "smooth" });
+    Perguntas.addEventListener("click", () => {
+        Container_Perguntas.scrollIntoView({ behavior: "smooth" });
     });
 
     Emagrecer.addEventListener("click", () => {
@@ -108,53 +108,94 @@ document.addEventListener('DOMContentLoaded', () => {
         ContainerNav.style.display = 'flex'
     });
 });
-
-const Calcular = document.getElementById('Calcular');
-
-function IMC(){
-    const Peso = parseFloat(document.getElementById('Peso').value);
+function Calculadora() {
     const Altura = parseFloat(document.getElementById('Altura').value);
+    const Peso = parseFloat(document.getElementById('Peso').value);
     const Mensagem = document.getElementById('Mensagem');
 
-    if(isNaN(Peso) || isNaN(Altura) || Peso <= 0 || Altura <= 0 ){
-        Mensagem.textContent = 'Preencha todos os campos corretamente';
+    if (isNaN(Peso) || isNaN(Altura)) {
+        Mensagem.textContent = 'preencha todos os campos'
         return;
     }
 
-    const ValorIMC = Peso / (Altura * Altura);
-    let classificacao = '';
+    let imc = Peso / (Altura * Altura);
 
-    if (ValorIMC < 18.5) {
-        classificacao = 'abaixo do peso';
-    } else if (ValorIMC >= 18.5 && ValorIMC <= 24.9) {
-        classificacao = 'com peso ideal';
-    } else if (ValorIMC >= 25 && ValorIMC <= 29.9) {
-        classificacao = 'acima do peso';
-    } else {
-        classificacao = 'com uma classificação não comum';
+    if (imc < 17) {
+        Mensagem.textContent = 'Voce está muito  abaixo do Peso !'
+    } if (imc >= 17 && imc <= 18) {
+        Mensagem.textContent = 'Voce esta abaixo do peso !'
+    } if (imc > 18 && imc <= 24) {
+        Mensagem.textContent = 'Voce esta no Peso ideal ! '
+    } if (imc > 24 && imc <= 29) {
+        Mensagem.textContent = 'Voce está acima do Peso!'
+    } if (imc > 29 && imc <= 34) {
+        Mensagem.textContent = 'Voce está com Obesidade I !'
+    } if (imc > 34 && imc <= 39) {
+        Mensagem.textContent = 'Voce está com Obesidade II !'
+    } if (imc > 40) {
+        Mensagem.textContent = 'Voce está com Obesidade III !'
     }
 
-    Mensagem.textContent = `Você está pesando ${Peso}kg, seu IMC é ${ValorIMC.toFixed(2)} e você está ${classificacao}`;
 }
 
-Calcular.addEventListener('click', IMC);
+document.getElementById('Calcular').addEventListener('click', Calculadora);
 
-function Evento_Rolagem(){
-const Container_Perguntas = document.querySelector('.Container-Perguntas');
-const Container_Posicao = Container_Perguntas.getBoundingClientRect().top;
-const screen_Position = window.innerHeight / 1.3;
 
-if(Container_Posicao < screen_Position){
-Container_Perguntas.classList.add('visible');
+function Evento_Rolagem() {
+    const Container_Perguntas = document.querySelector('.Container-Perguntas');
+    const Container_Posicao = Container_Perguntas.getBoundingClientRect().top;
+    const screen_Position = window.innerHeight / 1.3;
+
+    if (Container_Posicao < screen_Position) {
+        Container_Perguntas.classList.add('visible');
+    }
 }
-}
-document.addEventListener('DOMContentLoaded' , Evento_Rolagem);
-document.addEventListener('scroll' , Evento_Rolagem);
+document.addEventListener('DOMContentLoaded', Evento_Rolagem);
+document.addEventListener('scroll', Evento_Rolagem);
 
-function Indicacao_Exercicio(){
-const emagrecer = document.querySelector('.emagrecer');
-const engordar = document.querySelector('.engordar');
-const massa = document.querySelector('.massa-muscular')
-const ContainerExercicios = document.querySelector('.Container-Exercicios')
+function Indicacao_Exercicio() {
+    const emagrecer = document.querySelector('.emagrecer');
+    const engordar = document.querySelector('.engordar');
+    const massa = document.querySelector('.massa-muscular')
+    const ContainerExercicios = document.querySelector('.Container-Exercicios')
+    const ContainerTreino = document.querySelector('.Container-Treino')
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+        ContainerExercicios.style.display = 'none'
+        ContainerTreino.style.display = 'none'
+
+        emagrecer.addEventListener('click', () => {
+            ContainerExercicios.style.display = 'flex'
+            ContainerExercicios.scrollIntoView({ behavior: "smooth" });
+
+        })
+
+        engordar.addEventListener('click', () => {
+            ContainerTreino.style.display = 'flex'
+            ContainerTreino.scrollIntoView({ behavior: "smooth" });
+
+        })
+
+    })
 
 }
+Indicacao_Exercicio()
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const slideshow = document.getElementById('slideshow');
+    const images = [
+        'img/xzoQmc-removebg-preview.png',
+        'img/img-mulher-fit-removebg-preview-removebg-preview.png',
+        'img/abs-adult-athlete-1229356-removebg-preview.png'
+    ];
+    let currentImageIndex = 0;
+
+    function changeImage() {
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        slideshow.src = images[currentImageIndex];
+    }
+
+    setInterval(changeImage, 3000); // Muda a imagem a cada 3 segundos
+});
