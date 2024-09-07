@@ -207,6 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const startButton = document.getElementById('startButton');
     const stopButton = document.getElementById('stopButton');
     const resetButton = document.getElementById('resetButton');
+    const mensagem = document.querySelector('.mensagem')
 
     let timer;
     let seconds = 10;
@@ -225,7 +226,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 clearInterval(timer);
                 isRunning = false;
                 timerDisplay.textContent = '0';
+                mensagem.textContent = 'tempo esgotado';
+                mensagem.style.color = 'red';
+                mensagem.style.fontSize = '1.3rem'
                 return;
+
             }
             seconds--;
             updateTimerDisplay();
@@ -235,15 +240,18 @@ document.addEventListener('DOMContentLoaded', () => {
     function stopTimer() {
         clearInterval(timer);
         isRunning = false;
+        mensagem.textContent = ''
     }
 
     function resetTimer() {
         stopTimer();
         seconds = 10;
         updateTimerDisplay();
+        mensagem.textContent = ''
     }
 
     startButton.addEventListener('click', startTimer);
     stopButton.addEventListener('click', stopTimer);
     resetButton.addEventListener('click', resetTimer);
 });
+
