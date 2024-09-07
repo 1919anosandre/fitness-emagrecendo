@@ -100,16 +100,12 @@ nav ul .ContainerNav img {
 
 .logo {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    color: #ffa600;
 
 }
 
-.logo li {
-    margin-right: 100px;
-}
 
 
 
@@ -339,6 +335,7 @@ strong {
     color: #ffa600;
     display: flex;
     align-items: center;
+    padding: 10px;
 }
 
 button {
