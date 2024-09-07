@@ -8,17 +8,12 @@
 }
 
 body {
-    box-sizing: border-box;
-    width: 100%;
     height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url('img/treino-pesado-removebg-preview.png');
+    background: url('img/treino-pesado-removebg-preview.png');
     background-position: center;
-
-}
-html{
-height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
 
 }
 
@@ -60,10 +55,10 @@ nav {
 }
 
 main {
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
 section {
@@ -125,40 +120,36 @@ nav ul .ContainerNav img {
     align-items: center;
     height: 100vh;
     margin: 290px auto 0;
-
+    flex-direction: column;
+    width: 100%;
+    z-index: 2;
+    padding: 5px 5%;
 }
 
-.Container-Principal,
-.Texto h1 {
+.Container-Principal h1 {
     color: rgb(255, 255, 255);
-    font-size: 3rem;
+    font-size: 3em;
     font-weight: 700;
     letter-spacing: 2px;
     text-align: center;
     text-shadow: 2px 2px 4px rgb(0, 0, 0);
 }
 
-.Container-Principal,
-.Texto p {
+.Container-Principal p {
     color: rgb(255, 255, 255);
-    font-size: 2rem;
+    font-size: 1.1rem;
     text-align: center;
+    margin-top: 5px;
 
 }
 
-.Container-Principal img {
-    height: 400px;
-    width: 100%;
-    max-width: 400px;
-    margin-right: 10px;
-}
 
 .Container-Receitas {
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    background-color: #feffbc;
+    background-color: #ffffff;
     scroll-snap-type: y mandatory;
 
 }
@@ -169,7 +160,7 @@ nav ul .ContainerNav img {
 }
 
 .Receitas h1 {
-    color: rgb(22, 22, 22);
+    color: rgb(255, 136, 0);
     font-size: 1.3rem;
     font-weight: 700;
     letter-spacing: 2px;
@@ -177,7 +168,7 @@ nav ul .ContainerNav img {
 }
 
 .Receitas p {
-    color: rgb(49, 49, 48);
+    color: rgb(10, 10, 10);
     font-size: 1.1rem;
     font-weight: 600;
     padding: 5px 4%;
@@ -223,7 +214,7 @@ nav ul .ContainerNav img {
     font-size: 1.5rem;
     font-weight: bold;
     letter-spacing: 2px;
-    color: rgb(12, 18, 44);
+    color: rgb(255, 123, 0);
 }
 
 strong {
@@ -251,7 +242,7 @@ strong {
 
 
 .Texto p {
-    color: rgb(35, 70, 94);
+    color: #0b1b47;
     font-size: 1.2rem;
     font-weight: 600;
 
@@ -263,7 +254,7 @@ strong {
 .Container-Treino {
     display: none;
     justify-content: center;
-    background-color: #102138;
+    background-color: #0b1b47;
     scroll-snap-type: y mandatory;
     flex-direction: column;
 
@@ -282,11 +273,13 @@ strong {
 
 .Exercicios h1,
 .Exercicios-Treino {
-    color: rgb(255, 249, 249);
+    color: rgb(255, 145, 0);
     font-weight: 700;
     font-size: 2em;
     text-align: center;
     letter-spacing: 2px;
+    animation: animacao-blur 2s ease-in-out infinite alternate;
+
 }
 
 .Exercicios p,
@@ -297,6 +290,8 @@ strong {
     text-align: center;
     padding: 2px 5%;
     text-transform: none;
+    animation: animacao-blur 2s ease-in-out infinite alternate;
+
 }
 
 .Exercicios img,
@@ -305,9 +300,70 @@ strong {
     height: auto;
 }
 
+.Iniciar-Exercicio {
+    background-color: rgb(255, 145, 0);
+    color: #ffffff;
+    padding: 15px;
+    width: 150px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    border-radius: 10px;
+}
+
+.Iniciar-Exercicio:hover {
+    cursor: pointer;
+
+}
+
+.gifs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.gifs img {
+    width: 300px;
+    height: auto;
+    margin-top: 10px;
+}
+
+
+#timer {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: #ffa600;
+    display: flex;
+    align-items: center;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#startButton {
+    color: #0b1b47;
+}
+
+
+#stopButton {
+    color: #0b1b47;
+}
 
 
 
+#resetButton {
+    color: #0b1b47;
+}
 
 
 .Container-Contato {
@@ -325,16 +381,14 @@ strong {
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0;
     width: 100%;
-    background-color: #d4feff;
+    height: 100vh;
+    background-color: #0b1b47;
+
 
 }
 
-.Container-Perguntas.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
+
 
 .Perguntas {
     display: flex;
@@ -345,7 +399,7 @@ strong {
 }
 
 .Perguntas h1 {
-    color: rgb(12, 38, 68);
+    color: rgb(255, 136, 0);
     font-size: 4em;
     font-weight: bold;
     letter-spacing: 2px;
@@ -353,7 +407,7 @@ strong {
 }
 
 .Perguntas p {
-    color: rgb(15, 25, 37);
+    color: hsl(0, 0%, 100%);
     font-size: 3em;
     font-weight: 600;
 
@@ -385,12 +439,26 @@ strong {
     margin: 50px auto 0;
     justify-content: center;
     width: 100%;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+
+
+}
+
+.Background-image-calc {
     background-image: url('img/pesando.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 100vh;
-
+    top: 0;
+    left: 0;
+    filter: blur(2px);
+    z-index: -1;
+    background-image: url('img/pesando.jpg');
+    width: 100%;
+    position: absolute;
+    height: 100%;
 }
 
 .Form {
@@ -398,19 +466,18 @@ strong {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: rgba(0, 68, 255, 0.5);
+    background-color: #0b1b47;
     width: 100%;
     max-width: 430px;
     height: 430px;
     border-radius: 7px;
     padding-block-end: 10px;
-
-
+    position: relative;
 }
 
 .Form h1 {
     font-size: 35px;
-    color: rgb(255, 255, 255);
+    color: rgb(255, 153, 0);
 }
 
 .Form label {
@@ -445,8 +512,8 @@ strong {
 
 #Calcular {
     margin-top: 15px;
-    background-color: rgb(21, 27, 80);
-    color: rgb(255, 252, 252);
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 145, 0);
     font-size: 20px;
     border-radius: 10px;
     border: none;
@@ -455,8 +522,9 @@ strong {
 }
 
 #Calcular:hover {
-    background-color: rgb(56, 59, 228);
+    background-color: rgb(255, 145, 0);
     cursor: pointer;
+    color: #ffffff;
 }
 
 
@@ -464,9 +532,8 @@ strong {
 
 @media all and (max-width: 767px) {
 
-    body{
-    background-size: contain;
-height: 100vh;
+    body {
+        background-size: contain;
     }
 
     .ContainerNav {
@@ -495,7 +562,7 @@ height: 100vh;
 
     }
 
- 
+
 
 
 
@@ -565,5 +632,19 @@ height: 100vh;
 
     .Form {
         width: 80%;
+    }
+}
+
+@keyframes animacao-blur {
+    0% {
+        filter: blur(10);
+    }
+
+    50% {
+        filter: blur(5);
+    }
+
+    100% {
+        filter: blur(0);
     }
 }
