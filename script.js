@@ -141,17 +141,6 @@ function Calculadora() {
 document.getElementById('Calcular').addEventListener('click', Calculadora);
 
 
-function Evento_Rolagem() {
-    const Container_Perguntas = document.querySelector('.Container-Perguntas');
-    const Container_Posicao = Container_Perguntas.getBoundingClientRect().top;
-    const screen_Position = window.innerHeight / 1.3;
-
-    if (Container_Posicao < screen_Position) {
-        Container_Perguntas.classList.add('visible');
-    }
-}
-document.addEventListener('DOMContentLoaded', Evento_Rolagem);
-document.addEventListener('scroll', Evento_Rolagem);
 
 function Indicacao_Exercicio() {
     const emagrecer = document.querySelector('.emagrecer');
@@ -198,4 +187,63 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     setInterval(changeImage, 3000); // Muda a imagem a cada 3 segundos
+});
+
+//iniciar exercicios
+
+document.addEventListener('DOMContentLoaded' ,()=>{
+const Iniciar = document.querySelector('.Iniciar-Exercicio')
+const gifs = document.querySelector('.gifs')
+
+gifs.style.display = 'none'
+Iniciar.addEventListener('click', ()=>{
+gifs.style.display = 'flex'
+})
+})
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const timerDisplay = document.getElementById('timer');
+    const startButton = document.getElementById('startButton');
+    const stopButton = document.getElementById('stopButton');
+    const resetButton = document.getElementById('resetButton');
+
+    let timer;
+    let seconds = 10;
+    let isRunning = false;
+
+    function updateTimerDisplay() {
+        timerDisplay.textContent = seconds;
+    }
+
+    function startTimer() {
+        if (isRunning) return;
+        isRunning = true;
+
+        timer = setInterval(() => {
+            if (seconds <= 0) {
+                clearInterval(timer);
+                isRunning = false;
+                timerDisplay.textContent = '0';
+                return;
+            }
+            seconds--;
+            updateTimerDisplay();
+        }, 1000);
+    }
+
+    function stopTimer() {
+        clearInterval(timer);
+        isRunning = false;
+    }
+
+    function resetTimer() {
+        stopTimer();
+        seconds = 10;
+        updateTimerDisplay();
+    }
+
+    startButton.addEventListener('click', startTimer);
+    stopButton.addEventListener('click', stopTimer);
+    resetButton.addEventListener('click', resetTimer);
 });
